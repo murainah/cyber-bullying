@@ -1,0 +1,1 @@
+This project is a WebApp that used is used for detecting wether a tweet is cyberbullying or not. This project is built using machine learning to detect cyberbullying tweets, and what class the bullying also falls in .

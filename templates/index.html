@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <style>
+    body{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    h1{
+
+    }
+    </style>
+</head>
+<body>
+
+<div>
+<h1 align="center">Welcome to the CyberBullying Prediction Service</h1>
+</div>
+
+<div style="text-align:center">
+<img src="{{url_for('static', filename='IMG_6032.JPG')}}" height="250" width="250">
+</div>
+
+<div style="width:700px;margin:0 auto;text-align:center">
+
+     This WebApp is used for detecting whether a tweet is cyberbullying or not.
+     This project is built using machine learning to detect cyberbullying tweets, and what class the bullying also falls in . Enter a tweet
+    below for a prediction!
+
+</div>
+
+<div>
+     <form method="POST" align="center"  action="{{ url_for('predict')}}" >
+        <input style="width:400px" name="text">
+        <input type="submit">
+    </form>
+</div>
+
+<p align="center">{{ submission }}</p><br>
+<marquee direction="right"
+        behavior="alternate"
+        style="border:ORANGE 5px SOLID">
+    {{ prediction_text }}
+</marquee>
+</body>
+</html>
